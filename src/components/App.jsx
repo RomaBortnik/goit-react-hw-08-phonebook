@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
 
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter';
@@ -9,6 +10,12 @@ import Loader from './Loader';
 import defaultImage from '../images/defaultImage.png';
 import { fetchContacts } from 'redux/operations';
 import { getIsLoading, getError } from 'redux/selectors';
+
+import SharedLayout from './SharedLayout';
+import Home from 'pages/Home';
+import Login from 'pages/Login';
+import Register from 'pages/Register';
+import Contacts from 'pages/Contacts';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -21,7 +28,15 @@ export const App = () => {
 
   return (
     <>
-      {isLoading && !error && <Loader />}
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />}></Route>
+          <Route path="register" element={<Register />}></Route>
+          <Route path="login" element={<Login />}></Route>
+          <Route path="contacts" element={<Contacts />}></Route>
+        </Route>
+      </Routes>
+      {/* {isLoading && !error && <Loader />}
       {error && <img src={defaultImage} alt="Something went wrong"></img>}
       {!error && (
         <>
@@ -31,7 +46,7 @@ export const App = () => {
           <Filter></Filter>
           <ContactList></ContactList>
         </>
-      )}
+      )} */}
     </>
   );
 };
