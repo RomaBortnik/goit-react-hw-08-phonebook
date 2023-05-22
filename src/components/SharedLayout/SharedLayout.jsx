@@ -1,11 +1,15 @@
 import AppBar from 'components/AppBar';
 import { Outlet } from 'react-router-dom';
 
+import { Container } from './SharedLayout.styled';
+
 const SharedLayout = () => {
   return (
     <>
       <AppBar></AppBar>
-      <Outlet></Outlet>
+      <Container>
+        <Outlet></Outlet>
+      </Container>
     </>
   );
 };

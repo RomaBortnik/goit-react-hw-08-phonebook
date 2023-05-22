@@ -1,9 +1,15 @@
+import {
+  UserMenuContainer,
+  UserMenuText,
+  UserMenuBtn,
+} from './UserMenu.styled';
+
 const UserMenu = () => {
   return (
-    <div>
-      <p>Welcome, user</p>
-      <button type="button">Logout</button>
-    </div>
+    <UserMenuContainer>
+      <UserMenuText>Welcome, user</UserMenuText>
+      <UserMenuBtn type="button">Logout</UserMenuBtn>
+    </UserMenuContainer>
   );
 };
 

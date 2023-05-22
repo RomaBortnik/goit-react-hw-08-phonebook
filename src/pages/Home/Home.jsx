@@ -1,5 +1,11 @@
+import { HomePage } from './Home.styled';
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <HomePage></HomePage>
+    </>
+  );
 };
 
 export default Home;
