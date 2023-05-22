@@ -1,21 +1,19 @@
 import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filter/slice';
 
-import css from './Filter.module.css';
+import { FilterInput, FilterLabel } from './Filter.styled';
 
 const Filter = () => {
-  const { contactsListLabel, contactsFormInput } = css;
   const dispatch = useDispatch();
   return (
-    <label className={contactsListLabel}>
+    <FilterLabel>
       Find contacts by name
-      <input
+      <FilterInput
         onChange={e => dispatch(setFilter(e.target.value))}
-        className={contactsFormInput}
         type="text"
         name="filter"
       />
-    </label>
+    </FilterLabel>
   );
 };
 

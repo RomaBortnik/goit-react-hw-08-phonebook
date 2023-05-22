@@ -1,12 +1,17 @@
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { Formik, Field, Form } from 'formik';
+import { Formik } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { getContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
-import css from './ContactForm.module.css';
+import {
+  StyledContactForm,
+  ContactFormLabel,
+  ContactFormInput,
+  ContactFormBtn,
+} from './ContactForm.styled';
 
 const initialValues = {
   name: '',
@@ -32,21 +37,13 @@ const ContactForm = () => {
     }
   };
 
-  const {
-    contactsForm,
-    contactsFormLabel,
-    contactsFormInput,
-    contactsFormBtn,
-  } = css;
-
   return (
     <>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form className={contactsForm}>
-          <label className={contactsFormLabel} htmlFor="name">
+        <StyledContactForm>
+          <ContactFormLabel htmlFor="name">
             Name
-            <Field
-              className={contactsFormInput}
+            <ContactFormInput
               type="text"
               name="name"
               id="name"
@@ -54,11 +51,10 @@ const ContactForm = () => {
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
             />
-          </label>
-          <label className={contactsFormLabel} htmlFor="number">
+          </ContactFormLabel>
+          <ContactFormLabel htmlFor="number">
             Number
-            <Field
-              className={contactsFormInput}
+            <ContactFormInput
               type="tel"
               name="number"
               id="number"
@@ -66,12 +62,9 @@ const ContactForm = () => {
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
             />
-          </label>
-
-          <button className={contactsFormBtn} type="submit">
-            Add contact
-          </button>
-        </Form>
+          </ContactFormLabel>
+          <ContactFormBtn type="submit">Add contact</ContactFormBtn>
+        </StyledContactForm>
       </Formik>
       <ToastContainer autoClose={2000} theme="dark" />
     </>

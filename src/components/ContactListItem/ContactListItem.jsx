@@ -4,16 +4,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { deleteContact } from 'redux/contacts/operations';
-import css from './ContactListItem.module.css';
+import { Contact, ContactBtn } from './ContactListItem.styled';
 
 const ContactListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
   return (
     <>
-      <li className={css.contactsListItem}>
+      <Contact>
         {name}: {number}
-        <button
-          className={css.contactsListBtn}
+        <ContactBtn
           onClick={() => {
             toast.success(`${name} removed from the contact list.`);
             dispatch(deleteContact(id));
@@ -21,8 +20,8 @@ const ContactListItem = ({ name, number, id }) => {
           type="button"
         >
           Delete
-        </button>
-      </li>
+        </ContactBtn>
+      </Contact>
       <ToastContainer autoClose={2000} theme="dark" />
     </>
   );

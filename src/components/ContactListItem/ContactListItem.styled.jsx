@@ -1,12 +1,14 @@
-.contactsListItem {
+import styled from 'styled-components';
+
+export const Contact = styled.li`
   font-weight: 400;
   font-size: 20px;
   padding: 4px 0;
   display: flex;
   align-items: center;
-}
+`;
 
-.contactsListBtn {
+export const ContactBtn = styled.button`
   font-size: 14px;
   padding: 2px 8px;
   border: 1px solid #e9e9e9;
@@ -14,4 +16,4 @@
   border-radius: 8px;
   cursor: pointer;
   margin-left: 12px;
-}
+`;

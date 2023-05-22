@@ -9,6 +9,7 @@ import Loader from 'components/Loader';
 import defaultImage from '../../images/defaultImage.png';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getIsLoading, getError } from 'redux/contacts/selectors';
+import { ContactsTitle } from './Contacts.styled';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -25,11 +26,11 @@ const Contacts = () => {
       {error && <img src={defaultImage} alt="Something went wrong"></img>}
       {!error && (
         <>
-          <h1 className="title">Phonebook</h1>
-          <ContactForm></ContactForm>
-          <h2 className="title">Contacts</h2>
-          <Filter></Filter>
-          <ContactList></ContactList>
+          <ContactsTitle className="title">Phonebook</ContactsTitle>
+          <ContactForm />
+          <ContactsTitle className="title">Contacts</ContactsTitle>
+          <Filter />
+          <ContactList />
         </>
       )}
     </>
