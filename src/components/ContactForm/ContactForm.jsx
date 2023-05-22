@@ -4,13 +4,13 @@ import { Formik, Field, Form } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { getContacts } from 'redux/selectors';
-import { addContact } from 'redux/operations';
+import { getContacts } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/operations';
 import css from './ContactForm.module.css';
 
 const initialValues = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 const ContactForm = () => {
@@ -18,7 +18,7 @@ const ContactForm = () => {
   const contacts = useSelector(getContacts);
 
   const handleSubmit = (values, { resetForm }) => {
-    const { name, phone } = values;
+    const { name, number } = values;
     const nameToLowerCase = name.toLowerCase();
     const equalEl = contacts.find(
       contact => contact.name.toLowerCase() === nameToLowerCase
@@ -26,7 +26,7 @@ const ContactForm = () => {
     if (equalEl) {
       return toast.error(`${name} is already in contact list`);
     } else {
-      dispatch(addContact({ name, phone }));
+      dispatch(addContact({ name, number }));
       toast.success(`${name} successfully added to the contact list.`);
       resetForm();
     }
@@ -55,13 +55,13 @@ const ContactForm = () => {
               required
             />
           </label>
-          <label className={contactsFormLabel} htmlFor="phone">
+          <label className={contactsFormLabel} htmlFor="number">
             Number
             <Field
               className={contactsFormInput}
               type="tel"
-              name="phone"
-              id="phone"
+              name="number"
+              id="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required

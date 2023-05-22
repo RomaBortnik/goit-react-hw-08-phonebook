@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import css from './ContactListItem.module.css';
 
 const ContactListItem = ({ name, number, id }) => {

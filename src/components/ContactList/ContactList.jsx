@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import ContactListItem from 'components/ContactListItem';
-import { contactsListFilter } from 'redux/selectors';
+import { contactsListFilter } from 'redux/filter/selectors';
 import css from './ContactList.module.css';
 
 const ContactList = () => {
@@ -9,11 +9,11 @@ const ContactList = () => {
 
   return (
     <ul className={css.contactsList}>
-      {filteredContactsList.map(({ name, phone, id }) => (
+      {filteredContactsList.map(({ name, number, id }) => (
         <ContactListItem
           key={id}
           name={name}
-          number={phone}
+          number={number}
           id={id}
         ></ContactListItem>
       ))}
