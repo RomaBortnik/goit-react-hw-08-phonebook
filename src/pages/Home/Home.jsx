@@ -24,6 +24,7 @@ const Home = () => {
               <img src={phoneImage} alt="" />
             </PhoneBookBox>
           </PhoneBookWrapper>
+
           <PhoneBookWrapper>
             <PhoneBook src={phoneBook} alt="" />
           </PhoneBookWrapper>

@@ -36,11 +36,13 @@ const Contacts = () => {
               <ContactsTitle>Contacts</ContactsTitle>
               <Filter />
             </ContactsContainer>
+
             <ContactsContainer>
               <ContactsTitle>Phonebook</ContactsTitle>
               <ContactForm />
             </ContactsContainer>
           </ContactsWrapper>
+
           {contacts.length !== 0 && (
             <ContactsContainer>
               <ContactsTitle>Contact list</ContactsTitle>
