@@ -1,7 +1,13 @@
 import { useDispatch } from 'react-redux';
-import { Formik, Field, Form } from 'formik';
+import { Formik } from 'formik';
 
 import { register } from 'redux/auth/operations';
+import {
+  StyledRegisterForm,
+  RegisterFormInput,
+  RegisterFormLabel,
+  RegisterFormBtn,
+} from './RegisterForm.styled';
 
 const initialValues = {
   name: '',
@@ -21,21 +27,26 @@ const RegisterForm = () => {
   return (
     <>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-        <Form>
-          <label htmlFor="name">
+        <StyledRegisterForm>
+          <RegisterFormLabel htmlFor="name">
             Username
-            <Field type="text" name="name" id="name" required />
-          </label>
-          <label htmlFor="email">
+            <RegisterFormInput type="text" name="name" id="name" required />
+          </RegisterFormLabel>
+          <RegisterFormLabel htmlFor="email">
             Email
-            <Field type="email" name="email" id="email" required />
-          </label>
-          <label htmlFor="password">
+            <RegisterFormInput type="email" name="email" id="email" required />
+          </RegisterFormLabel>
+          <RegisterFormLabel htmlFor="password">
             Password
-            <Field type="password" name="password" id="password" required />
-          </label>
-          <button type="submit">Register</button>
-        </Form>
+            <RegisterFormInput
+              type="password"
+              name="password"
+              id="password"
+              required
+            />
+          </RegisterFormLabel>
+          <RegisterFormBtn type="submit">Register</RegisterFormBtn>
+        </StyledRegisterForm>
       </Formik>
     </>
   );

@@ -8,13 +8,18 @@ import ContactList from 'components/ContactList';
 import Loader from 'components/Loader';
 import defaultImage from '../../images/defaultImage.png';
 import { fetchContacts } from 'redux/contacts/operations';
-import { getIsLoading, getError } from 'redux/contacts/selectors';
-import { ContactsTitle } from './Contacts.styled';
+import { getIsLoading, getError, getContacts } from 'redux/contacts/selectors';
+import {
+  ContactsTitle,
+  ContactsWrapper,
+  ContactsContainer,
+} from './Contacts.styled';
 
 const Contacts = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
+  const contacts = useSelector(getContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -26,11 +31,22 @@ const Contacts = () => {
       {error && <img src={defaultImage} alt="Something went wrong"></img>}
       {!error && (
         <>
-          <ContactsTitle className="title">Phonebook</ContactsTitle>
-          <ContactForm />
-          <ContactsTitle className="title">Contacts</ContactsTitle>
-          <Filter />
-          <ContactList />
+          <ContactsWrapper>
+            <ContactsContainer>
+              <ContactsTitle>Contacts</ContactsTitle>
+              <Filter />
+            </ContactsContainer>
+            <ContactsContainer>
+              <ContactsTitle>Phonebook</ContactsTitle>
+              <ContactForm />
+            </ContactsContainer>
+          </ContactsWrapper>
+          {contacts.length !== 0 && (
+            <ContactsContainer>
+              <ContactsTitle>Contact list</ContactsTitle>
+              <ContactList />
+            </ContactsContainer>
+          )}
         </>
       )}
     </>
