@@ -2,26 +2,40 @@ import styled from 'styled-components';
 import { Form, Field } from 'formik';
 
 export const StyledContactForm = styled(Form)`
-  width: 400px;
+  width: 100%;
   padding: 12px 16px;
   border-radius: 12px;
   margin-bottom: 24px;
   background-color: rgb(187, 192, 192, 0.1);
+
+  @media (min-width: 768px) {
+    width: 360px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 480px;
+  }
 `;
 
 export const ContactFormLabel = styled.label`
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  margin-bottom: 24px;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const ContactFormInput = styled(Field)`
   margin-top: 4px;
   width: 100%;
-  height: 30px;
-  font-size: 18px;
+  height: 24px;
+  padding: 8px;
+  font-size: 16px;
   font-weight: 400;
   border: none;
   outline: none;
@@ -31,6 +45,11 @@ export const ContactFormInput = styled(Field)`
   &:focus {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
       0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (min-width: 768px) {
+    height: 30px;
+    font-size: 18px;
   }
 `;
 

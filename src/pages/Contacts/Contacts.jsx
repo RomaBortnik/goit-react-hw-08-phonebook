@@ -33,13 +33,13 @@ const Contacts = () => {
         <>
           <ContactsWrapper>
             <ContactsContainer>
-              <ContactsTitle>Contacts</ContactsTitle>
-              <Filter />
+              <ContactsTitle>Phonebook</ContactsTitle>
+              <ContactForm />
             </ContactsContainer>
 
             <ContactsContainer>
-              <ContactsTitle>Phonebook</ContactsTitle>
-              <ContactForm />
+              <ContactsTitle>Contacts</ContactsTitle>
+              <Filter />
             </ContactsContainer>
           </ContactsWrapper>
 
