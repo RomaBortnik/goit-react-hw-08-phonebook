@@ -2,19 +2,30 @@ import styled from 'styled-components';
 import { Form, Field } from 'formik';
 
 export const StyledRegisterForm = styled(Form)`
-  margin: 24px auto 0;
-  width: 360px;
-  padding: 36px 24px;
+  width: 100%;
+  padding: 24px 12px;
+  margin: 12px auto 0;
   border-radius: 12px;
   background-color: rgb(187, 192, 192, 0.1);
+
+  @media (min-width: 768px) {
+    width: 360px;
+    padding: 36px 24px;
+    margin: 24px auto 0;
+  }
 `;
 
 export const RegisterFormLabel = styled.label`
   display: flex;
   flex-direction: column;
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  margin-bottom: 24px;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const RegisterFormInput = styled(Field)`

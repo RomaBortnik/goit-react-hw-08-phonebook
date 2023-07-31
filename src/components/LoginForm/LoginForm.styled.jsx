@@ -1,15 +1,13 @@
 import styled from 'styled-components';
-import { Form, Field } from 'formik';
+import { Field } from 'formik';
+import {
+  StyledRegisterForm,
+  RegisterFormLabel,
+} from 'components/RegisterForm/RegisterForm.styled';
 
-export const StyledLoginForm = styled(Form)`
-  margin: 24px auto 0;
-  width: 360px;
-  padding: 36px 24px;
-  border-radius: 12px;
-  background-color: rgb(187, 192, 192, 0.1);
-`;
+export const StyledLoginForm = styled(StyledRegisterForm)``;
 
-export const LoginFormLabel = styled.label`
+export const LoginFormLabel = styled(RegisterFormLabel)`
   display: flex;
   flex-direction: column;
   font-size: 20px;

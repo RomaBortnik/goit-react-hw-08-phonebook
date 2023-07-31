@@ -1,11 +1,11 @@
-import { StyledLogin, StyledRegister } from './AuthNav.styled';
+import { StyledLogin, StyledRegister, AuthContainer } from './AuthNav.styled';
 
 const AuthNav = () => {
   return (
-    <div>
+    <AuthContainer>
       <StyledRegister to="/register">Register</StyledRegister>
       <StyledLogin to="/login">Log In</StyledLogin>
-    </div>
+    </AuthContainer>
   );
 };
 
