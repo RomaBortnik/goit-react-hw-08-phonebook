@@ -3,14 +3,27 @@ import styled from 'styled-components';
 export const UserMenuContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 196px;
+
+  @media (min-width: 768px) {
+    width: 260px;
+  }
 `;
 
 export const UserMenuText = styled.p`
-  margin-right: 12px;
+  margin-right: 4px;
+  font-size: 16px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-right: 12px;
+    font-size: 20px;
+  }
 `;
 
 export const UserMenuBtn = styled.button`
-  padding: 2px 36px;
+  padding: 2px 16px;
   border-radius: 12px;
   border: none;
   background-color: #000;
@@ -19,7 +32,7 @@ export const UserMenuBtn = styled.button`
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   display: flex;
   align-items: center;
@@ -30,5 +43,10 @@ export const UserMenuBtn = styled.button`
   &:hover {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
       0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (min-width: 768px) {
+    padding: 2px 36px;
+    font-size: 18px;
   }
 `;

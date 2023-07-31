@@ -6,6 +6,7 @@ import {
   PhoneBookTitle,
   PhoneBookBox,
   PhoneBookDescr,
+  PhoneBookImage,
 } from './Home.styled';
 import phoneBook from '../../images/phoneBook.jpg';
 import phoneImage from '../../images/phoneImage.jpg';
@@ -21,7 +22,7 @@ const Home = () => {
               <PhoneBookDescr>
                 The whole library is in your phone
               </PhoneBookDescr>
-              <img src={phoneImage} alt="" />
+              <PhoneBookImage src={phoneImage} alt=""></PhoneBookImage>
             </PhoneBookBox>
           </PhoneBookWrapper>
 

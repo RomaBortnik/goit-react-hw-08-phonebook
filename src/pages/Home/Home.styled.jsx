@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
 export const HomePage = styled.div`
-  width: 1000px;
-  height: 100%;
+  width: 100%;
   background-color: #fff;
-  border-radius: 60px;
-  margin: 60px auto 0;
-  padding: 4px;
+  border-radius: 24px;
+  margin: 24px auto 0;
+
+  @media (min-width: 768px) {
+    border-radius: 60px;
+    margin-top: 60px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1000px;
+  }
 `;
 
 export const HomePageContainer = styled.div`
@@ -15,16 +22,20 @@ export const HomePageContainer = styled.div`
 `;
 
 export const PhoneBook = styled.img`
-  // min-width: calc(100% / 2);
+  width: 100%;
   // height: 100%;
   object-fit: cover;
-  border-radius: 60px;
+  border-radius: 24px;
   margin: 0;
+
+  @media (min-width: 768px) {
+    border-radius: 60px;
+  }
 `;
 
 export const PhoneBookWrapper = styled.div`
   position: relative;
-  min-width: calc(100% / 2 - 20px);
+  width: 50%;
   margin: 0;
 `;
 
@@ -34,20 +45,47 @@ export const PhoneBookBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%;
 `;
 
 export const PhoneBookTitle = styled.div`
-  font-size: 60px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 12px;
+
+  @media (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 60px;
+    font-size: 52px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 64px;
+  }
 `;
 
 export const PhoneBookDescr = styled.p`
-  font-size: 26px;
+  font-size: 12px;
   font-weight: 700;
   margin-bottom: 16px;
-
-  // color: grey;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 28px;
+  }
+`;
+
+export const PhoneBookImage = styled.img`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
