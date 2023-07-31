@@ -34,7 +34,7 @@ export const ContactFormInput = styled(Field)`
   margin-top: 4px;
   width: 100%;
   height: 24px;
-  padding: 8px;
+  padding: 12px;
   font-size: 16px;
   font-weight: 400;
   border: none;

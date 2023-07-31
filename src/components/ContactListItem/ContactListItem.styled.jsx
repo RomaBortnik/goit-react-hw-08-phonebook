@@ -33,6 +33,7 @@ export const ContactBtn = styled.button`
   padding: 8px 16px;
   cursor: pointer;
   margin-left: 12px;
+  color: #000;
   border: none;
   border-radius: 12px;
   background-image: linear-gradient(

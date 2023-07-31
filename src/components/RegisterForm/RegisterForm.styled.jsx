@@ -37,6 +37,7 @@ export const RegisterFormInput = styled(Field)`
   border: none;
   outline: none;
   border-radius: 4px;
+  padding: 12px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus {

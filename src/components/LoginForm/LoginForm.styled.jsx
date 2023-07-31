@@ -19,6 +19,7 @@ export const LoginFormInput = styled(Field)`
   margin-top: 4px;
   width: 100%;
   height: 30px;
+  padding: 12px;
   font-size: 18px;
   font-weight: 400;
   border: none;
