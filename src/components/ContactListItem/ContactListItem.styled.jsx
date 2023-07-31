@@ -7,16 +7,22 @@ export const Contact = styled.li`
   font-weight: 400;
   font-size: 14px;
   padding: 4px 12px;
-  margin-bottom: 12px;
   display: flex;
   align-items: center;
   background-color: rgb(187, 192, 192, 0.1);
   border-radius: 12px;
 
+  @media (max-width: 767px) {
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
+  }
+
   @media (min-width: 768px) {
     min-width: 360px;
     font-size: 16px;
     padding: 8px 12px;
+    margin-bottom: 12px;
   }
 
   @media (min-width: 1280px) {
