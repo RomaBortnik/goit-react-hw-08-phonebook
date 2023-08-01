@@ -8,7 +8,7 @@ import Loader from 'components/Loader';
 const SharedLayout = () => {
   return (
     <>
-      <AppBar></AppBar>
+      <AppBar />
       <Container>
         <Suspense fallback={<Loader />}>
           <Outlet />

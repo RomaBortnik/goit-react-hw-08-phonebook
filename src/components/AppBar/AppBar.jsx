@@ -12,7 +12,7 @@ const AppBar = () => {
     <Header>
       <Container>
         <NavContainer>
-          <Navigation></Navigation>
+          <Navigation />
           {isLoggedIn ? <UserMenu /> : <AuthNav />}
         </NavContainer>
       </Container>

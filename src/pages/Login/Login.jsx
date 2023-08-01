@@ -16,7 +16,7 @@ const Login = () => {
 
   return (
     <>
-      <LoginForm></LoginForm>
+      <LoginForm />
       <ToastContainer autoClose={1500} theme="dark" />
     </>
   );
