@@ -3,12 +3,9 @@ import styled from 'styled-components';
 export const Contact = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   font-weight: 400;
   font-size: 14px;
   padding: 4px 12px;
-  display: flex;
-  align-items: center;
   background-color: rgb(187, 192, 192, 0.1);
   border-radius: 12px;
 
@@ -19,17 +16,11 @@ export const Contact = styled.li`
   }
 
   @media (min-width: 768px) {
-    min-width: 360px;
     font-size: 16px;
     padding: 8px 12px;
-    margin-bottom: 12px;
   }
 
   @media (min-width: 1280px) {
-    flex-basis: calc((100% / 3 - 36px));
-    margin-left: 12px;
-    margin-top: 12px;
-    gap: 12px;
     font-size: 18px;
   }
 `;
@@ -38,7 +29,7 @@ export const ContactBtn = styled.button`
   font-size: 14px;
   padding: 8px 16px;
   cursor: pointer;
-  margin-left: 12px;
+  margin-left: auto;
   color: #000;
   border: none;
   border-radius: 12px;

@@ -21,8 +21,8 @@ const ContactListItem = ({ name, number, id }) => {
         >
           Delete
         </ContactBtn>
+        <ToastContainer autoClose={2000} theme="dark" />
       </Contact>
-      <ToastContainer autoClose={2000} theme="dark" />
     </>
   );
 };

@@ -5,10 +5,13 @@ export const StyledContactList = styled.ul`
   border-radius: 12px;
 
   @media (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: calc(-1 * 8px);
-    margin-top: calc(-1 * 8px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
