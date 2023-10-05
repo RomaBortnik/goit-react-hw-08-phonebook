@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://phonebook-backend-blh1.onrender.com';
 
 export const phonebookInnstance = axios.create({
   baseURL: `${BASE_URL}`,
