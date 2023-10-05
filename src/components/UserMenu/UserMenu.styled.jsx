@@ -20,7 +20,7 @@ export const UserMenuText = styled.p`
 `;
 
 export const UserMenuBtn = styled.button`
-  padding: 2px 12px;
+  padding: 4px 12px;
   border-radius: 12px;
   border: none;
   background-color: #000;

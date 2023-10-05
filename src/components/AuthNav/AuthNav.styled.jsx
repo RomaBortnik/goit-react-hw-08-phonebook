@@ -14,8 +14,8 @@ export const AuthContainer = styled.div`
 
 export const StyledRegister = styled(NavLink)`
   font-size: 16px;
-  line-height: 1.5;
-  padding: 2px 16px;
+  line-height: 1.2;
+  padding: 4px 16px;
   color: #000;
   border-radius: 12px;
   background-image: linear-gradient(
@@ -31,7 +31,7 @@ export const StyledRegister = styled(NavLink)`
   }
 
   @media (min-width: 768px) {
-    padding: 2px 36px;
+    padding: 4px 36px;
     font-size: 18px;
   }
 `;
