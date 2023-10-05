@@ -17,34 +17,29 @@ export const HomePage = styled.div`
 `;
 
 export const HomePageContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const PhoneBook = styled.img`
   width: 100%;
-  // height: 100%;
+  height: 240px;
   object-fit: cover;
   border-radius: 24px;
-  margin: 0;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     border-radius: 60px;
+    width: 100%;
+    height: 100%;
   }
 `;
 
 export const PhoneBookWrapper = styled.div`
-  position: relative;
-  width: 50%;
-  margin: 0;
-`;
-
-export const PhoneBookBox = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  padding: 12px;
 `;
 
 export const PhoneBookTitle = styled.div`
@@ -84,8 +79,4 @@ export const PhoneBookDescr = styled.p`
 
 export const PhoneBookImage = styled.img`
   width: 100%;
-
-  @media (min-width: 768px) {
-    width: 100%;
-  }
 `;

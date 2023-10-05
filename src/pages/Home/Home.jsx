@@ -4,7 +4,6 @@ import {
   PhoneBook,
   PhoneBookWrapper,
   PhoneBookTitle,
-  PhoneBookBox,
   PhoneBookDescr,
   PhoneBookImage,
 } from './Home.styled';
@@ -13,25 +12,17 @@ import phoneImage from '../../images/phoneImage.jpg';
 
 const Home = () => {
   return (
-    <>
-      <HomePage>
-        <HomePageContainer>
-          <PhoneBookWrapper>
-            <PhoneBookBox>
-              <PhoneBookTitle>Phonebook</PhoneBookTitle>
-              <PhoneBookDescr>
-                The whole library is in your phone
-              </PhoneBookDescr>
-              <PhoneBookImage src={phoneImage} alt=""></PhoneBookImage>
-            </PhoneBookBox>
-          </PhoneBookWrapper>
+    <HomePage>
+      <HomePageContainer>
+        <PhoneBookWrapper>
+          <PhoneBookTitle>Phonebook</PhoneBookTitle>
+          <PhoneBookDescr>The whole library is in your phone</PhoneBookDescr>
+          <PhoneBookImage src={phoneImage} alt="Bookshelf"></PhoneBookImage>
+        </PhoneBookWrapper>
 
-          <PhoneBookWrapper>
-            <PhoneBook src={phoneBook} alt="" />
-          </PhoneBookWrapper>
-        </HomePageContainer>
-      </HomePage>
-    </>
+        <PhoneBook src={phoneBook} alt="Online phonebook" />
+      </HomePageContainer>
+    </HomePage>
   );
 };
 

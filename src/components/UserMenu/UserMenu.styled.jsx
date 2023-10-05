@@ -4,26 +4,23 @@ export const UserMenuContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 196px;
-
-  @media (min-width: 768px) {
-    width: 260px;
-  }
 `;
 
 export const UserMenuText = styled.p`
   margin-right: 4px;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 700;
   text-align: center;
 
   @media (min-width: 768px) {
     margin-right: 12px;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
   }
 `;
 
 export const UserMenuBtn = styled.button`
-  padding: 2px 16px;
+  padding: 2px 12px;
   border-radius: 12px;
   border: none;
   background-color: #000;
@@ -32,8 +29,8 @@ export const UserMenuBtn = styled.button`
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +43,7 @@ export const UserMenuBtn = styled.button`
   }
 
   @media (min-width: 768px) {
-    padding: 2px 36px;
+    padding: 4px 36px;
     font-size: 18px;
   }
 `;
