@@ -31,7 +31,7 @@ const ContactForm = () => {
     if (equalEl) {
       return toast.error(`${name} is already in contact list`);
     } else {
-      dispatch(addContact({ name, number }));
+      dispatch(addContact({ name, phone: number }));
       toast.success(`${name} successfully added to the contact list.`);
       resetForm();
     }

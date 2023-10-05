@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const BASE_URL = 'https://connections-api.herokuapp.com/';
+const BASE_URL = 'http://localhost:3001';
 
 export const phonebookInnstance = axios.create({
   baseURL: `${BASE_URL}`,
@@ -19,7 +19,10 @@ export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
-      const res = await phonebookInnstance.post('/users/signup', credentials);
+      const res = await phonebookInnstance.post(
+        '/api/auth/register',
+        credentials
+      );
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
@@ -32,7 +35,7 @@ export const logIn = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
     try {
-      const res = await phonebookInnstance.post('/users/login', credentials);
+      const res = await phonebookInnstance.post('/api/auth/login', credentials);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
@@ -43,7 +46,7 @@ export const logIn = createAsyncThunk(
 
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
-    await phonebookInnstance.post('/users/logout');
+    await phonebookInnstance.post('api/auth/logout');
     clearAuthHeader();
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
@@ -62,7 +65,7 @@ export const refreshUser = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      const res = await phonebookInnstance.get('/users/current');
+      const res = await phonebookInnstance.get('/api/auth/current');
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

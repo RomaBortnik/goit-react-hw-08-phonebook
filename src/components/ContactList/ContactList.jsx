@@ -9,12 +9,12 @@ const ContactList = () => {
 
   return (
     <StyledContactList>
-      {filteredContactsList.map(({ name, number, id }) => (
+      {filteredContactsList.map(({ name, phone, _id }) => (
         <ContactListItem
-          key={id}
+          key={_id}
           name={name}
-          number={number}
-          id={id}
+          phone={phone}
+          id={_id}
         ></ContactListItem>
       ))}
     </StyledContactList>

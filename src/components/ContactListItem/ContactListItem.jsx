@@ -6,12 +6,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { deleteContact } from 'redux/contacts/operations';
 import { Contact, ContactBtn } from './ContactListItem.styled';
 
-const ContactListItem = ({ name, number, id }) => {
+const ContactListItem = ({ name, phone, id }) => {
   const dispatch = useDispatch();
   return (
     <>
       <Contact>
-        {name}: {number}
+        {name}: {phone}
         <ContactBtn
           onClick={() => {
             toast.success(`${name} removed from the contact list.`);
@@ -29,7 +29,7 @@ const ContactListItem = ({ name, number, id }) => {
 
 ContactListItem.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
 
